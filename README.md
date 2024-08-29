@@ -68,3 +68,38 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+### Install Mongodb on Ubuntu
+
+Fetch MongoDB
+`wget -qO - https://www.mongodb.org/static/pgp/server-7.0.asc | sudo apt-key add -`
+
+(Optional) Remove the existing MongoDB list (if any):
+`sudo rm /etc/apt/sources.list.d/mongodb-org-7.0.list`
+
+Add the MongoDB repository:
+For Ubuntu 22.04 (Jammy):
+`echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list`
+
+For Ubuntu 20.04 (Focal):
+`echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list`
+
+Update package manager
+`sudo apt-get update`
+
+Install MongoDB
+`sudo apt-get install -y mongodb-org`
+
+Start & enable mongodb
+```
+sudo systemctl start mongod
+sudo systemctl enable mongod
+```
+
+
+
+
+
+

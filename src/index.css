@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.columns-container {
+  display: flex;
+  gap: 16px; /* Adjust gap as needed */
+}
+
+.column {
+  flex: 1; /* Allows columns to grow and fill available space */
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
